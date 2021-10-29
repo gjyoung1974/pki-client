@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.7" jmeter="2.12 r1636949">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1419538026000</longProp>
+        <longProp name="ThreadGroup.end_time">1419538026000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <JavaSampler guiclass="JavaTestSamplerGui" testclass="JavaSampler" testname="Java Request" enabled="true">
+          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="cacerts_file" elementType="Argument">
+                <stringProp name="Argument.name">cacerts_file</stringProp>
+                <stringProp name="Argument.value">./lib/ext/cacerts.jks</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="cacerts_file_passwd" elementType="Argument">
+                <stringProp name="Argument.name">cacerts_file_passwd</stringProp>
+                <stringProp name="Argument.value">changeit</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="auth_p12" elementType="Argument">
+                <stringProp name="Argument.name">auth_p12</stringProp>
+                <stringProp name="Argument.value">./lib/ext/svc-ces_client.pfx</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="auth_p12_passwd" elementType="Argument">
+                <stringProp name="Argument.name">auth_p12_passwd</stringProp>
+                <stringProp name="Argument.value">Password1!</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="TemplateName" elementType="Argument">
+                <stringProp name="Argument.name">TemplateName</stringProp>
+                <stringProp name="Argument.value">ACMEWebServer</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="SubjectDN" elementType="Argument">
+                <stringProp name="Argument.name">SubjectDN</stringProp>
+                <stringProp name="Argument.value">cn=gordon Young,ou=pki,o=ACME Corp,c=US</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="dnEmail" elementType="Argument">
+                <stringProp name="Argument.name">dnEmail</stringProp>
+                <stringProp name="Argument.value">gordon.young@example.local</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="SAN" elementType="Argument">
+                <stringProp name="Argument.name">SAN</stringProp>
+                <stringProp name="Argument.value">DNS=www.gordon.edu&amp;DNS=www.gordon.org&amp;DNS=www.google.com&amp;DNS=www1.google.com&amp;email=test.test@gmail.com&amp;DNS=www2.google.com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="CertFormat" elementType="Argument">
+                <stringProp name="Argument.name">CertFormat</stringProp>
+                <stringProp name="Argument.value">CER</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="MEXuRI" elementType="Argument">
+                <stringProp name="Argument.name">MEXuRI</stringProp>
+                <stringProp name="Argument.value">https://goyoung-dc01.corp.gordonjyoung.com/ACME%20Issuing%20CA_CES_Certificate/service.svc</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="OU1" elementType="Argument">
+                <stringProp name="Argument.name">OU1</stringProp>
+                <stringProp name="Argument.value">corp</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="OU2" elementType="Argument">
+                <stringProp name="Argument.name">OU2</stringProp>
+                <stringProp name="Argument.value">acme</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="OU3" elementType="Argument">
+                <stringProp name="Argument.name">OU3</stringProp>
+                <stringProp name="Argument.value">com</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="OU4" elementType="Argument">
+                <stringProp name="Argument.name">OU4</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="OU5" elementType="Argument">
+                <stringProp name="Argument.name">OU5</stringProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="classname">com.goyoung.pki.util.Jmeter.Samplers.CES_Sampler</stringProp>
+        </JavaSampler>
+        <hashTree/>
+        <ResultCollector guiclass="GraphVisualizer" testclass="ResultCollector" testname="Graph Results" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="ApacheJMeter_components.jar"/>
+	<classpathentry kind="lib" path="ApacheJMeter_core.jar"/>
+	<classpathentry kind="lib" path="ApacheJMeter_java.jar"/>
+	<classpathentry kind="lib" path="bcprov-jdk15-146.jar"/>
+	<classpathentry kind="lib" path="bcprov-jdk16-146.jar"/>
+	<classpathentry kind="lib" path="stax-api.jar"/>
+	<classpathentry kind="lib" path="webservices-api.jar"/>
+	<classpathentry kind="lib" path="webservices-extra-api.jar"/>
+	<classpathentry kind="lib" path="webservices-extra.jar"/>
+	<classpathentry kind="lib" path="webservices-rt.jar"/>
+	<classpathentry kind="lib" path="webservices-tools.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
